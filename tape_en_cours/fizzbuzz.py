@@ -11,12 +11,11 @@ def regle_fizz_buzz_1(nombre):
 
 
 def regle_fizz_buzz(nombre):
-    res = 0
-    if res % 3 == 0 and res % 5 == 0:
+    if nombre % 3 == 0 and nombre % 5 == 0:
         return "fizzbuzz"
-    if res % 3 == 0:
+    if nombre % 3 == 0:
         return "fizz"
-    if res % 5 == 0:
+    if nombre % 5 == 0:
         return "buzz"
 
-    return res
+    return nombre
