@@ -6,7 +6,6 @@ def regle_fizz_buzz_1(nombre):
         res = "fizz"
     elif nombre % 5 == 0:
         res = "buzz"
-
     return res
 
 
