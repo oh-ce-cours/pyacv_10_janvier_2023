@@ -1,10 +1,10 @@
 def regle_fizz_buzz_1(nombre):
     res = nombre
-    if res % 3 == 0 and res % 5 == 0:
+    if nombre % 3 == 0 and nombre % 5 == 0:
         res = "fizzbuzz"
-    elif res % 3 == 0:
+    elif nombre % 3 == 0:
         res = "fizz"
-    elif res % 5 == 0:
+    elif nombre % 5 == 0:
         res = "buzz"
 
     return res
