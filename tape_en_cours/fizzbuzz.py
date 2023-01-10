@@ -28,3 +28,11 @@ def regle_fizz_buzz(nombre):
     if not res:
         res = nombre
     return res
+
+
+for nombre in range(1, 101):
+    print(regle_fizz_buzz(nombre))
+
+### équivalent à
+
+[regle_fizz_buzz(nombre) for nombre in range(1, 101)]
