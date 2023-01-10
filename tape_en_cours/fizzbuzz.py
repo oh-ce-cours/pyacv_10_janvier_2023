@@ -1,4 +1,4 @@
-def regle_fizz_buzz(nombre):
+def regle_fizz_buzz_1(nombre):
     res = nombre
     if res % 3 == 0 and res % 5 == 0:
         res = "fizzbuzz"
