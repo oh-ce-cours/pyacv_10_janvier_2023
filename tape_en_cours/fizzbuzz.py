@@ -43,7 +43,7 @@ def regle_fizz_buzz(nombre: int) -> str:
 
 
 for nombre in range(1, 101):
-    print(regle_fizz_buzz(nombre))
+    print(regle_fizz_buzz("tto"))
 
 ### équivalent à
 
