@@ -1,3 +1,6 @@
+from typing import Union
+
+
 def regle_fizz_buzz_1(nombre):
     res = nombre
     if nombre % 3 == 0 and nombre % 5 == 0:
