@@ -11,16 +11,12 @@ def my_map(f: Callable[[E], S], data: Iterator[E]) -> List[S]:
     return res
 
 
-def my_lazy_map(
-    func: Callable[[T_in], T_out], iterable: Iterable[T_in]
-) -> Iterable[T_out]:
+def my_lazy_map(func: Callable[[E], T_out], iterable: Iterable[E]) -> Iterable[T_out]:
     for item in iterable:
         yield func(item)
 
 
-def my_filter(
-    func: Callable[[T_in], bool], iterable: Iterable[T_in]
-) -> Iterable[T_out]:
+def my_filter(func: Callable[[E], bool], iterable: Iterable[E]) -> Iterable[T_out]:
     for item in iterable:
         if func(item):
             yield item
