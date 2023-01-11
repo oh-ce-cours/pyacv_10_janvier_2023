@@ -34,7 +34,9 @@ def toto():
         print(c)
         print(locals())
 
+    addition(1, 2)
+
 
 # print(locals())
 # print(globals())
-addition(1, 2)
+toto()
