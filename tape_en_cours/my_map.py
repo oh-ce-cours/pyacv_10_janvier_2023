@@ -22,5 +22,7 @@ def my_filter(func: Callable[[E], bool], iterable: Iterator[E]) -> Iterator[E]:
             yield item
 
 
-1_000_000
-0.000_000_3
+a = 1_000_000
+b = 0.000_000_3
+
+print(locals())
