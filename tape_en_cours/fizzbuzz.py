@@ -48,3 +48,12 @@ for nombre in range(1, 101):
 ### équivalent à
 
 [regle_fizz_buzz(nombre) for nombre in range(1, 101)]
+
+
+from typing import TypeVar
+
+T = TypeVar("T")
+
+
+def retourne_premier(l: [T]) -> T:
+    return l[0]
