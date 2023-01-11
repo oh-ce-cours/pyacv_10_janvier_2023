@@ -19,7 +19,7 @@ def regle_fizz_buzz_2(nombre):
     return nombre
 
 
-def regle_fizz_buzz(nombre):
+def regle_fizz_buzz_3(nombre):
     res = ""
     if nombre % 3 == 0:
         res += "fizz"
@@ -27,6 +27,15 @@ def regle_fizz_buzz(nombre):
         res += "buzz"
     if not res:
         res = nombre
+    return res
+
+
+def regle_fizz_buzz(nombre):
+    div_par_3 = nombre % 3 == 0
+    div_par_5 = nombre % 5 == 0
+
+    res = "fizz" * int(div_par_3) + "buzz" * int(div_par_5)
+    res = res or nombre
     return res
 
 
