@@ -27,8 +27,10 @@ b = 0.000_000_3
 
 
 def addition(x, y):
+    a = 3
     print(locals())
 
 
 # print(locals())
-print(globals())
+# print(globals())
+addition(1, 2)
