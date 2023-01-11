@@ -20,3 +20,7 @@ def my_filter(func: Callable[[E], bool], iterable: Iterator[E]) -> Iterator[E]:
     for item in iterable:
         if func(item):
             yield item
+
+
+1_000_000
+0.000_000_3
