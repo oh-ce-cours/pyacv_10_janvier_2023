@@ -26,9 +26,13 @@ a = 1_000_000
 b = 0.000_000_3
 
 
-def addition(x, y):
-    a = 3
-    print(locals())
+def toto():
+    c = 3
+
+    def addition(x, y):
+        a = 3
+        print(c)
+        print(locals())
 
 
 # print(locals())
