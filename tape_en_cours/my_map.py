@@ -25,4 +25,5 @@ def my_filter(func: Callable[[E], bool], iterable: Iterator[E]) -> Iterator[E]:
 a = 1_000_000
 b = 0.000_000_3
 
-print(locals())
+# print(locals())
+print(globals())
