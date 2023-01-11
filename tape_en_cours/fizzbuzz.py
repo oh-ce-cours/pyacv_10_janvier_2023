@@ -60,3 +60,4 @@ def retourne_premier(l: List[T]) -> T:
 
 
 a = retourne_premier([1, 2, 3])
+b = retourne_premier(["a", "b", "c"])
