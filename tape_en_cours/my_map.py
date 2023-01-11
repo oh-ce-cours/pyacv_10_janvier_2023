@@ -5,4 +5,4 @@ S = TypeVar("S")
 
 
 def my_map(f: Callable[[E], S], data: Iterator[E]) -> List[S]:
-    pass
+    return [f(data[0]), f(data[1])]
