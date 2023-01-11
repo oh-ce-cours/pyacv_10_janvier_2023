@@ -37,7 +37,7 @@ def regle_fizz_buzz(nombre: int) -> Union[str, int]:
     div_par_3 = nombre % 3 == 0
     div_par_5 = nombre % 5 == 0
 
-    res = "fizz" * int(div_par_3) + "buzz" * int(div_par_5)
+    res: Union[str, int] = "fizz" * int(div_par_3) + "buzz" * int(div_par_5)
     res = res or nombre
     return res
 
