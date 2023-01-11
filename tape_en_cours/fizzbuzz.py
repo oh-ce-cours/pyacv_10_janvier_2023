@@ -50,10 +50,10 @@ for nombre in range(1, 101):
 [regle_fizz_buzz(nombre) for nombre in range(1, 101)]
 
 
-from typing import TypeVar
+from typing import TypeVar, List
 
 T = TypeVar("T")
 
 
-def retourne_premier(l: [T]) -> T:
+def retourne_premier(l: List[T]) -> T:
     return l[0]
