@@ -16,7 +16,7 @@ def my_lazy_map(func: Callable[[E], S], iterable: Iterator[E]) -> Iterator[S]:
         yield func(item)
 
 
-def my_filter(func: Callable[[E], bool], iterable: Iterator[E]) -> Iterator[S]:
+def my_filter(func: Callable[[E], bool], iterable: Iterator[E]) -> Iterator[E]:
     for item in iterable:
         if func(item):
             yield item
