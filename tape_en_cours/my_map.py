@@ -31,6 +31,9 @@ def toto():
 
     def addition(x, y):
         a = 3
+        import pdb
+
+        pdb.set_trace()
         print(c)
         print(locals())
 
