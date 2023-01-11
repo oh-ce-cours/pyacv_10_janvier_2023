@@ -56,7 +56,7 @@ T = TypeVar("T")
 
 
 def retourne_premier(l: List[T]) -> T:
-    return l[0]
+    return "toto"
 
 
 a = retourne_premier([1, 2, 3])
