@@ -35,3 +35,7 @@ print("tata")
 with ChangePrint() as print:
     print("a l'intérieur")
 print("à l'extérieur")
+
+import contextlib
+
+contextlib.contextmanager
