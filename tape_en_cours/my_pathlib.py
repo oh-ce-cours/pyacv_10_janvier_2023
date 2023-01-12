@@ -15,6 +15,7 @@ class Path:
     def add_path(self, other_path: str):
         other_paths = other_path.split("/")
         self.paths.extend(other_paths)
+        return self
 
     def __str__(self):
         return self.join_path()
