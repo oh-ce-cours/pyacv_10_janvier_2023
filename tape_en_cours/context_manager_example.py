@@ -22,13 +22,13 @@ class ChangePrint:
     def __enter__(self):
         def my_print(*args, **kwargs):
             kwargs["file"] = self.output_file
-            print(*args, **kwargs)
+            self.old_printprint(*args, **kwargs)
 
         return my_print
 
     def __exit__(self, *args):
         global print
-        print = self.print
+        print = self.pold_print
 
 
 print("tata")
