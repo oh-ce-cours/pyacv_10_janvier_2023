@@ -22,7 +22,7 @@ class ChangePrint:
     def __enter__(self):
         def my_print(*args, **kwargs):
             kwargs["file"] = self.output_file
-            self.old_printprint(*args, **kwargs)
+            self.old_print(*args, **kwargs)
 
         return my_print
 
