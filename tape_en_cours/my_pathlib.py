@@ -21,8 +21,8 @@ class Path:
 
     def __truediv__(self, other: str):
         new_path = Path(self)
-        new_path.add_path(other)
-        return new_path
+        self.add_path(other)
+        return self
 
 
 if __name__ == "__main__":
