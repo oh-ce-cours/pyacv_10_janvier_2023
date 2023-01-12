@@ -6,7 +6,7 @@ class Path:
         return self.join_path()
 
     def join_path(self):
-        return "/".join(self.paths)
+        return "/" + "/".join(self.paths)
 
     def add_path(self, other_path: str):
         other_paths = other_path.split("/")
