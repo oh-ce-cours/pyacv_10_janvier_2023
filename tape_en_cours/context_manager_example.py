@@ -17,4 +17,5 @@ class ChangeOutput:
 print("tata")
 with ChangeOutput():
     print("a l'intérieur")
+    1 / 0
 print("à l'extérieur")
