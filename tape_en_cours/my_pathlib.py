@@ -1,5 +1,8 @@
+from typing import Optional
+
+
 class Path:
-    def __init__(self):
+    def __init__(self, path: Optional["Path"] = None):
         self.paths = []
 
     def __str__(self):
@@ -15,7 +18,7 @@ class Path:
     def __truediv__(self, other: str):
         new_path = Path(self)
         new_path.add_path(other)
-        return self
+        return new_path
 
 
 if __name__ == "__main__":
