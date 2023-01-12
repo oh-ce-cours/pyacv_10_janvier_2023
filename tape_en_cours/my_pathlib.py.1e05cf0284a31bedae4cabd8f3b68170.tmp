@@ -19,3 +19,4 @@ class Path:
 
 if __name__ == "__main__":
     p = Path() / "etc" / "nginx"
+    print(p)
