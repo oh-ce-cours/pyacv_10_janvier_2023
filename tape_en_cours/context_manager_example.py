@@ -13,3 +13,6 @@ class ChangeOutput:
 
 
 print("tata")
+with ChangeOutput():
+    print("a l'intérieur")
+print("à l'extérieur")
