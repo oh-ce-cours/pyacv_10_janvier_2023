@@ -16,11 +16,15 @@ class ChangeOutput:
 
 class ChangePrint:
     def __init__(self):
-        self.old_stdout = sys.stdout
+        self.old_print = print
         self.output_file = open("./stdout.txt", "w")
 
     def __enter__(self):
-        sys.stdout = self.output_file
+        def my_print(*args, **kwargs):
+            kwargs["file"] = self.output_file
+            print(*args, **kwargs)
+
+        return my_print
 
     def __exit__(self, *args):
         self.output_file.close()
