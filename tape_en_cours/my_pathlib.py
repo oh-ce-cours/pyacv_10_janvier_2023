@@ -13,7 +13,8 @@ class Path:
         self.paths.extend(other_paths)
 
     def __truediv__(self, other: str):
-        self.add_path(other)
+        new_path = Path(self)
+        new_path.add_path(other)
         return self
 
 
