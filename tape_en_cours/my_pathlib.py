@@ -34,4 +34,3 @@ if __name__ == "__main__":
 
     p = Path()
     print(p.add_path("etc").add_path("nginx"))
-    (type(4))(345.32)
