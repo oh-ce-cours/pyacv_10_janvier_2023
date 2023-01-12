@@ -29,4 +29,4 @@ if __name__ == "__main__":
     p1 = Path() / "etc"
     p2 = p1 / "nginx"
     print(id(p1), id(p2))
-    print(p)
+    print(p2)
