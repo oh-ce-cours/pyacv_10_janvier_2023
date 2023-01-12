@@ -27,8 +27,8 @@ class ChangePrint:
         return my_print
 
     def __exit__(self, *args):
-        self.output_file.close()
-        sys.stdout = self.old_stdout
+        global print
+        print = self.print
 
 
 print("tata")
