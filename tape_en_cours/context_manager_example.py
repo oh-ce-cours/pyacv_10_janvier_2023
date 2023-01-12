@@ -5,6 +5,8 @@ class ChangeOutput:
     def __init__(self):
         self.old_stdout = sys.stdout
         self.output_file = open("./stdout.txt", "w")
+
+    def __enter__():
         sys.stdout = self.output_file
 
     def __exit__(self, *args):
