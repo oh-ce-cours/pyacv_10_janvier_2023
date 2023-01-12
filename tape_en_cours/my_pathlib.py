@@ -22,8 +22,7 @@ class Path:
 
     def __truediv__(self, other: str):
         new_path = Path(self)
-        new_path.add_path(other)
-        return self
+        return new_path.add_path(other)
 
 
 if __name__ == "__main__":
@@ -33,4 +32,4 @@ if __name__ == "__main__":
     print(id(p1), id(p2))
     print(p2)
 
-    p.add_path("etc").add_path("nginx")
+    print(p.add_path("etc").add_path("nginx"))
