@@ -2,7 +2,7 @@ from typing import Optional
 
 
 class Path:
-    def __init__(self, path: "Path" = None):
+    def __init__(self, path: Optional["Path"] = None):
         if path is None:
             root = []
         else:
