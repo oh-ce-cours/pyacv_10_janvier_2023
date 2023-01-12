@@ -28,7 +28,7 @@ class ChangePrint:
 
     def __exit__(self, *args):
         global print
-        print = self.pold_print
+        print = self.old_print
 
 
 print("tata")
