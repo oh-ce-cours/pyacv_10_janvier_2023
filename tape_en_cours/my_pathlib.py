@@ -32,4 +32,5 @@ if __name__ == "__main__":
     print(id(p1), id(p2))
     print(p2)
 
+    p = Path()
     print(p.add_path("etc").add_path("nginx"))
