@@ -16,7 +16,7 @@ class ChangeOutput:
 
 print("tata")
 try:
-    with ChangeOutput():
+    with ChangeOutput() as print:
         print("a l'intérieur")
         1 / 0
 except:
