@@ -33,7 +33,7 @@ class ChangePrint:
 
 print("tata")
 try:
-    with ChangeOutput() as print:
+    with ChangePrint() as print:
         print("a l'intérieur")
         1 / 0
 except:
