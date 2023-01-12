@@ -6,6 +6,7 @@ class Path:
         if path is None:
             root = []
         else:
+            path: Path
             root = path.paths
         self.paths = root
 
