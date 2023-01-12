@@ -32,10 +32,6 @@ class ChangePrint:
 
 
 print("tata")
-try:
-    with ChangePrint() as print:
-        print("a l'intérieur")
-        1 / 0
-except:
-    pass
+with ChangePrint() as print:
+    print("a l'intérieur")
 print("à l'extérieur")
