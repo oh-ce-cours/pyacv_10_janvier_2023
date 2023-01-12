@@ -3,7 +3,11 @@ from typing import Optional
 
 class Path:
     def __init__(self, path: Optional["Path"] = None):
-        self.paths = []
+        if path is None:
+            root = []
+        else:
+            root = path.paths
+        self.paths = root
 
     def __str__(self):
         return self.join_path()
