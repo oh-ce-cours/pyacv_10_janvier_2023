@@ -15,7 +15,10 @@ class ChangeOutput:
 
 
 print("tata")
-with ChangeOutput():
-    print("a l'intérieur")
-    1 / 0
+try:
+    with ChangeOutput():
+        print("a l'intérieur")
+        1 / 0
+except:
+    pass
 print("à l'extérieur")
