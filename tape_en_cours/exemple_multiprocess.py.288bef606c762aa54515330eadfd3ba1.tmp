@@ -4,7 +4,7 @@ import random
 
 
 def f(x):
-    time.sleep(random.random())
+    time.sleep(random.random()* 2)
     return x * x
 
 
