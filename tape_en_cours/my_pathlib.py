@@ -30,8 +30,7 @@ class AbstractPath(abc.ABC):
         new_path = PathClass(self)
         return new_path.add_path(other)
 
-    @classmethod
-    def create(cls):
+    def __new__(cls, *args):
         platform = "linux"
         if platform == "linux":
             return UnixPath
@@ -70,3 +69,5 @@ if __name__ == "__main__":
 
     pw = WindowsPath()
     print(pw.add_path("etc").add_path("nginx"))
+
+import pathlib
