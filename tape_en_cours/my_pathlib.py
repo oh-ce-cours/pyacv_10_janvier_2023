@@ -26,7 +26,7 @@ class AbstractPath(abc.ABC):
         return new_path.add_path(other)
 
 
-class UnixPath(Path):
+class UnixPath(AbstractPath):
     def join_path(self):
         return "/" + "/".join(self.paths)
 
