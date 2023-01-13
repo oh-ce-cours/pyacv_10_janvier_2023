@@ -1,2 +1,2 @@
 def funniest():
-    print("c'est super drole")
+    print("c'est vraient super drole")
