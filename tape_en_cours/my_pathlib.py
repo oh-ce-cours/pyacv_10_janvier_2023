@@ -16,6 +16,10 @@ class AbstractPath(abc.ABC):
     def join_path(self):
         pass
 
+    @abc.abstractmethod
+    def get_separator():
+        pass
+
     def add_path(self, other_path: str):
         other_paths = other_path.split(self.separator)
         self.paths.extend(other_paths)
@@ -35,6 +39,9 @@ class UnixPath(AbstractPath):
 
     def join_path(self):
         return self.separator + self.separator.join(self.paths)
+
+    def get_separator():
+        return "/"
 
 
 class WindowsPath(AbstractPath):
