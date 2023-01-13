@@ -32,10 +32,10 @@ class AbstractPath(abc.ABC):
 
     @classmethod
     def create(cls, *args):
-        platform = "linux"
+        platform = "windows"
         if platform == "linux":
             return UnixPath
-        if platform == "window":
+        if platform == "windows":
             return WindowsPath
 
 
