@@ -10,9 +10,11 @@ class AbstractPath(abc.ABC):
             root = path.paths
         self.paths = root
 
+    @abc.abstractmethod
     def join_path(self):
         return "/" + "/".join(self.paths)
 
+    @abc.abstractmethod
     def add_path(self, other_path: str):
         other_paths = other_path.split("/")
         self.paths.extend(other_paths)
