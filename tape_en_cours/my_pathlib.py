@@ -1,7 +1,8 @@
 from typing import Optional
+import abc
 
 
-class Path:
+class AbstractPath(abc.ABC):
     def __init__(self, path: Optional["Path"] = None):
         if path is None:
             root = []
