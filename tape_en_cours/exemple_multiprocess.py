@@ -3,7 +3,7 @@ import time
 
 
 def f(x):
-    time.sleep(10)
+    time.sleep(1)
     return x * x
 
 
