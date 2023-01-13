@@ -36,7 +36,7 @@ class UnixPath(Path):
         return self
 
 
-class WindowsPath(Path):
+class WindowsPath(AbstractPath):
     def join_path(self):
         return "C:\\" + "\\".join(self.paths)
 
