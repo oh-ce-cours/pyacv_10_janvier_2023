@@ -10,4 +10,7 @@ setup(
     license="MIT",
     packages=["funniest"],
     zip_safe=False,
+    entry_point={  # commandes qui seront installées
+        "console_scripts": ["funniest-joke=funniest.command_line:main"],
+    },
 )
