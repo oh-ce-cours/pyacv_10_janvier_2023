@@ -36,6 +36,16 @@ class UnixPath(Path):
         return self
 
 
+class WindowsPath(Path):
+    def join_path(self):
+        return "C:\\" + "\\".join(self.paths)
+
+    def add_path(self, other_path: str):
+        other_paths = other_path.split("/")
+        self.paths.extend(other_paths)
+        return self
+
+
 if __name__ == "__main__":
     p = Path()
     p1 = p / "etc"
