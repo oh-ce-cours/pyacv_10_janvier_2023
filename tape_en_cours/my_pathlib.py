@@ -12,20 +12,28 @@ class AbstractPath(abc.ABC):
 
     @abc.abstractmethod
     def join_path(self):
-        return "/" + "/".join(self.paths)
+        pass
 
     @abc.abstractmethod
     def add_path(self, other_path: str):
-        other_paths = other_path.split("/")
-        self.paths.extend(other_paths)
-        return self
+        pass
 
     def __str__(self):
         return self.join_path()
 
     def __truediv__(self, other: str):
-        new_path = Path(self)
+        new_path = AbstractPath(self)
         return new_path.add_path(other)
+
+
+class UnixPath(Path):
+    def join_path(self):
+        return "/" + "/".join(self.paths)
+
+    def add_path(self, other_path: str):
+        other_paths = other_path.split("/")
+        self.paths.extend(other_paths)
+        return self
 
 
 if __name__ == "__main__":
