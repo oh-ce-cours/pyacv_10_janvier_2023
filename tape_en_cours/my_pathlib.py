@@ -32,12 +32,12 @@ class AbstractPath(abc.ABC):
 
 
 class UnixPath(AbstractPath):
-    def get_separator() -> str:
+    def get_separator(self) -> str:
         return "/"
 
 
 class WindowsPath(AbstractPath):
-    def get_separator() -> str:
+    def get_separator(self) -> str:
         return "\\"
 
     def join_path(self):
