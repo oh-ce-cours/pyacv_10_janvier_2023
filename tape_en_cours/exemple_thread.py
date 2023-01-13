@@ -28,6 +28,4 @@ t2 = Thread(
 t1.start()
 t2.start()
 print("Pas bloqué")
-t1.join()
-t2.join()
 print("Fini")
