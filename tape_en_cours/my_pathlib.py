@@ -36,22 +36,12 @@ class UnixPath(AbstractPath):
     def join_path(self):
         return self.separator + self.separator.join(self.paths)
 
-    def add_path(self, other_path: str):
-        other_paths = other_path.split(self.separator)
-        self.paths.extend(other_paths)
-        return self
-
 
 class WindowsPath(AbstractPath):
     separator = "\\"
 
     def join_path(self):
         return "C:\\" + "\\".join(self.paths)
-
-    def add_path(self, other_path: str):
-        other_paths = other_path.split("/")
-        self.paths.extend(other_paths)
-        return self
 
 
 if __name__ == "__main__":
