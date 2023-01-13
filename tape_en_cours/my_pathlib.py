@@ -3,8 +3,6 @@ import abc
 
 
 class AbstractPath(abc.ABC):
-    separator = ""
-
     def __init__(self, path: Optional["Path"] = None):
         if path is None:
             root = []
@@ -12,7 +10,6 @@ class AbstractPath(abc.ABC):
             root = path.paths
         self.paths = root
 
-    @abc.abstractmethod
     def join_path(self):
         pass
 
@@ -35,20 +32,16 @@ class AbstractPath(abc.ABC):
 
 
 class UnixPath(AbstractPath):
-    separator = "/"
-
-    def join_path(self):
-        return self.separator + self.separator.join(self.paths)
-
     def get_separator():
         return "/"
 
 
 class WindowsPath(AbstractPath):
-    separator = "\\"
+    def get_separator():
+        return "\\"
 
     def join_path(self):
-        return "C:\\" + "\\".join(self.paths)
+        return f"C:{self.get_separator()}" + self.get_separator().join(self.paths)
 
 
 if __name__ == "__main__":
