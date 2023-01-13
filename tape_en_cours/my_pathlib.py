@@ -14,7 +14,7 @@ class AbstractPath(abc.ABC):
         return self.get_separator() + self.get_separator().join(self.paths)
 
     @abc.abstractmethod
-    def get_separator() -> str:
+    def get_separator(self) -> str:
         pass
 
     def add_path(self, other_path: str):
