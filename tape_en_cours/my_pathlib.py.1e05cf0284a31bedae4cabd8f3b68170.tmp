@@ -18,7 +18,7 @@ class AbstractPath(abc.ABC):
         pass
 
     def add_path(self, other_path: str):
-        other_paths = other_path.split(self.separator)
+        other_paths = other_path.split(self.get_separator())
         self.paths.extend(other_paths)
         return self
 
