@@ -54,6 +54,8 @@ if __name__ == "__main__":
     p = UnixPath()
     print(p.add_path("etc").add_path("nginx"))
 
+    del p
+
     p = WindowsPath()
     p1 = p / "etc"
     p2 = p1 / "nginx"
