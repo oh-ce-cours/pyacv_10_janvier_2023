@@ -30,6 +30,14 @@ class AbstractPath(abc.ABC):
         new_path = PathClass(self)
         return new_path.add_path(other)
 
+    @classmethod
+    def create(cls):
+        platform = "linux"
+        if platform == "linux":
+            return UnixPath
+        if platform == "window":
+            return WindowsPath
+
 
 class UnixPath(AbstractPath):
     def get_separator(self) -> str:
@@ -53,7 +61,6 @@ if __name__ == "__main__":
 
     p = UnixPath()
     print(p.add_path("etc").add_path("nginx"))
-
 
     pw = WindowsPath()
     pw1 = pw / "etc"
