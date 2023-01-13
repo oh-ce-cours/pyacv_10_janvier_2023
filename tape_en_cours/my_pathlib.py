@@ -54,6 +54,7 @@ class WindowsPath(AbstractPath):
 
 if __name__ == "__main__":
     p = AbstractPath.create()
+    print(p)
     p1 = p / "etc"
     p2 = p1 / "nginx"
     print(id(p1), id(p2))
