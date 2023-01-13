@@ -22,7 +22,8 @@ class AbstractPath(abc.ABC):
         return self.join_path()
 
     def __truediv__(self, other: str):
-        new_path = AbstractPath(self)
+        PathClass = type(self)
+        new_path = PathClass(self)
         return new_path.add_path(other)
 
 
