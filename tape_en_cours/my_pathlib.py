@@ -33,9 +33,9 @@ class AbstractPath(abc.ABC):
     def __new__(cls, *args):
         platform = "linux"
         if platform == "linux":
-            return UnixPath(*args)
+            return UnixPath
         if platform == "window":
-            return WindowsPath(*args)
+            return WindowsPath
 
 
 class UnixPath(AbstractPath):
